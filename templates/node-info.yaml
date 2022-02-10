@@ -1,0 +1,9 @@
+parameter_defaults:
+  ControllerCount: 3
+  ComputeCount: 1
+  CephStorageCount: 3
+  NetworkerCount: 1
+  OvercloudComputeFlavor: baremetal
+  OvercloudControllerFlavor: baremetal
+  OvercloudCephStorageFlavor: baremetal
+  OvercloudNetworkerFlavor: baremetal

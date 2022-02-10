@@ -1,0 +1,6 @@
+resource_registry:
+  OS::TripleO::Services::NeutronBgpDragent: /usr/share/openstack-tripleo-heat-templates/deployment/neutron/neutron-bgp-dragent-container-puppet.yaml
+
+parameter_defaults:
+  ContainerNeutronBgpDragentImage: 'undercloud-osp162.ctlplane.hextupleo.lab:8787/rhosp-rhel8/openstack-neutron-bgp-dragent:16.2'
+  NeutronServicePlugins: 'router,qos,segments,trunk,port_forwarding,bgp'

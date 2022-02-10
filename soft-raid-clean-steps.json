@@ -1,0 +1,12 @@
+[{
+  "interface": "raid",
+  "step": "delete_configuration"
+ },
+ {
+  "interface": "deploy",
+  "step": "erase_devices_metadata"
+ },
+ {
+  "interface": "raid",
+  "step": "create_configuration"
+ }]

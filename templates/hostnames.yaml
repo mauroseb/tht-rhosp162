@@ -1,0 +1,19 @@
+parameter_defaults:
+  ControllerSchedulerHints:
+    'capabilities:node': 'mauro-controller-%index%'
+  ComputeSchedulerHints:
+    'capabilities:node': 'mauro-compute-%index%'
+  CephStorageSchedulerHints:
+    'capabilities:node': 'mauro-cephstorage-%index%'
+  NetworkerSchedulerHints:
+    'capabilities:node': 'mauro-networker-%index%'
+  HostnameMap:
+    mauro-controller-0: ctl-01
+    mauro-controller-1: ctl-02
+    mauro-controller-2: ctl-03
+    mauro-novacompute-0: com-01
+    mauro-novacompute-1: com-02
+    mauro-networker-0: net-01
+    mauro-cephstorage-0: ceph-01
+    mauro-cephstorage-1: ceph-02
+    mauro-cephstorage-2: ceph-03

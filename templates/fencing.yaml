@@ -1,0 +1,60 @@
+parameter_defaults:
+  EnableFencing: true
+  FencingConfig:
+    devices:
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:1d:28:76
+      params:
+        ipaddr: 10.70.0.154
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ceph-03
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:f0:90:dd
+      params:
+        ipaddr: 10.70.0.230
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ceph-02
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:10:ab:87
+      params:
+        ipaddr: 10.70.0.80
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ceph-01
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:4d:8a:29
+      params:
+        ipaddr: 10.70.0.150
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: com-01
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:c9:ce:51
+      params:
+        ipaddr: 10.70.0.13
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ctl-03
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:f7:72:6e
+      params:
+        ipaddr: 10.70.0.51
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ctl-02
+    - agent: fence_ipmilan
+      host_mac: fa:16:3e:a6:45:8c
+      params:
+        ipaddr: 10.70.0.47
+        lanplus: true
+        login: mauro
+        passwd: maurosoy
+        pcmk_host_list: ctl-01

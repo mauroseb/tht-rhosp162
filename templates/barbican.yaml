@@ -1,0 +1,5 @@
+parameter_defaults:
+  BarbicanSimpleCryptoGlobalDefault: True
+  BarbicanPassword: redhat
+  BarbicanPolicies: { barbican-default: { key: 'secret_project_creator', value: 'rule:creator and rule:secret_project_match'} }
+  #BarbicanDebug: True

@@ -1,0 +1,38 @@
+resource_registry:
+  OS::TripleO::Compute::Net::SoftwareConfig:
+    ./nic-config/compute.yaml
+  OS::TripleO::Controller::Net::SoftwareConfig:
+    ./nic-config/controller.yaml
+  OS::TripleO::CephStorage::Net::SoftwareConfig:
+    ./nic-config/ceph-storage.yaml
+  OS::TripleO::Networker::Net::SoftwareConfig:
+    ./nic-config/networker.yaml
+
+
+parameter_defaults:
+  InternalApiNetCidr: 10.20.0.0/24
+  StorageNetCidr: 10.40.0.0/24
+  StorageMgmtNetCidr: 10.50.0.0/24
+  TenantNetCidr: 10.30.0.0/24
+  ExternalNetCidr: 10.1.0.0/24
+  StorageNFSNetCidr: 10.80.0.0/24
+  InternalApiAllocationPools: [{'start': '10.20.0.120', 'end': '10.20.0.200'}]
+  StorageAllocationPools: [{'start': '10.40.0.120', 'end': '10.40.0.200'}]
+  StorageMgmtAllocationPools: [{'start': '10.50.0.120', 'end': '10.50.0.200'}]
+  TenantAllocationPools: [{'start': '10.30.0.10', 'end': '10.30.0.200'}]
+  StorageNFSAllocationPools: [{'start': '10.80.0.10', 'end': '10.80.0.200'}]
+  ExternalAllocationPools: [{'start': '10.1.0.90', 'end': '10.1.0.99'}]
+  ExternalInterfaceDefaultRoute: 10.1.0.11
+  DnsServers: ["10.9.71.7","8.8.8.8"]
+  #NeutronNetworkType: 'geneve,vlan'
+  #NeutronTunnelTypes: 'geneve'
+  NeutronNetworkType: 'vxlan,vlan'
+  NeutronTunnelTypes: 'vxlan'
+  NeutronNetworkVLANRanges: 'datacentre:1:1000'
+  NeutronBridgeMappings: 'datacentre:br-ex,provider:br-provider,storagenfs:br-storagenfs'
+  NeutronFlatNetworks: 'datacentre,provider,storagenfs'
+  BondInterfaceOvsOptions: "mode=4 miimon=150 updelay=1000 xmit_hash_policy=2+3"
+  NetworkDeploymentActions: [ "CREATE", "UPDATE" ]
+  EC2MetadataIp: 172.16.0.2
+  #NetworkServicePlugins: 'router,qos,segments,trunk,port_forwarding,bgp'
+
