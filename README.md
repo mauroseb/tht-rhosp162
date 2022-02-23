@@ -4,6 +4,7 @@ TripleO Heat Templates for RHOSP 16.2
 
 The deployment provides the following features and services:
  - Octavia in active-standby mode
+ - Composable Octavia Role (merged with Networker role)
  - Manila (with NFS Ganesha)
  - Ceph storage backend (MDS, RGW, CephFS, Dashboard)
  - Networker nodes
